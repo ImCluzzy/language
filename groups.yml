@@ -61,7 +61,7 @@ enigma:
   permissions:
   - 'donate.enigma'
 sponge:
-  displayName: '§7§lSPONGE §f'
+  displayName: '§7§lSPONGE §7'
   donate: true
   boost: 2.0
   reward-buy: 900
@@ -74,7 +74,7 @@ sponge:
   permissions:
   - 'donate.enigma'
 support:
-  displayName: '§d§lSUPPORT §f'
+  displayName: '§d§lSUPPORT §d'
   donate: true
   boost: 2.5
   reward-buy: 1500
@@ -88,7 +88,7 @@ support:
   permissions:
   - 'donate.support'
 youtube:
-  displayName: '§c§lY§f§lT §f'
+  displayName: '§c§lY§f§lT §c'
   secure: true
   boost: 1.3
   subgroups:
@@ -104,7 +104,7 @@ youtube:
 # Стафф привилегии
 organizer:
   secure: true
-  displayName: '§3§lEVENT §f'
+  displayName: '§3§lEVENT §3'
   subgroups:
   - 'default'
   - 'gold'
@@ -118,7 +118,7 @@ organizer:
   - 'staff.mute'
   - 'staff.chat'
 builder:
-  displayName: '§2§lBUILDER §f'
+  displayName: '§2§lBUILDER §2'
   boost: 1.2
   subgroups:
   - 'default'
@@ -130,7 +130,7 @@ builder:
   - 'staff.builder'
   - 'staff.chat'
 hbuilder:
-  displayName: '§2§lH-BUILDER §f'
+  displayName: '§2§lH-BUILDER §2'
   subgroups:
   - 'default'
   - 'gold'
@@ -142,7 +142,7 @@ hbuilder:
   - 'staff.hbuilder'
   - 'staff.mute'
 tmoder:
-  displayName: '§b§lT-MODER §f'
+  displayName: '§b§lT-MODER §b'
   boost: 1.1
   subgroups:
   - 'default'
@@ -163,7 +163,7 @@ tmoder:
   - 'litebans.history'
   - 'gyros.alert'
 moder:
-  displayName: '§9§lMODER §f'
+  displayName: '§9§lMODER §9'
   boost: 1.2
   subgroups:
   - 'default'
@@ -191,7 +191,7 @@ moder:
   - 'litebans.notify.banned_join'
   - 'bw.tp'
 hmoder:
-  displayName: '§1§lH-MODER §f'
+  displayName: '§1§lH-MODER §1'
   boost: 1.3
   subgroups:
   - 'default'
@@ -217,7 +217,7 @@ hmoder:
   - 'litebans.checkmute'
   - 'reports.manager'
 developer:
-  displayName: '§3§lDEV §f'
+  displayName: '§3§lDEV §3'
   boost: 2.0
   secure: true
   subgroups:
