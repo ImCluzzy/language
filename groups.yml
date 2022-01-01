@@ -1,0 +1,316 @@
+# Стандартный ранг игрока
+default:
+  displayName: '§7'
+  subgroups: []
+  default: true
+  permissions:
+  - 'litebans.notify'
+  - 'group.default'
+  - 'party.invite'
+  - 'party.join'
+  - 'party.kick'
+  - 'party.leader'
+  - 'party.leave'
+  - 'party.toggle'
+  - 'party.uninvite'
+  - 'party.goto'
+  - 'party.disband'
+  - 'party.chat'
+# Привилегии
+gold:
+  displayName: '§e§lGOLD §e'
+  donate: true
+  reward-buy: 500
+  boost: 1.2
+  subgroups:
+  - 'default'
+  permissions:
+  - 'donate.gold'
+  - 'bw.gold'
+diamond:
+  displayName: '§b§lDIAMOND §b'
+  donate: true
+  boost: 1.4
+  reward-buy: 600
+  subgroups:
+  - 'default'
+  - 'gold'
+  permissions:
+  - 'donate.diamond'
+emerald:
+  displayName: '§a§lEMERALD §a'
+  donate: true
+  boost: 1.6
+  reward-buy: 700
+  subgroups:
+  - 'default'
+  - 'gold'
+  - 'diamond'
+  permissions:
+  - 'donate.emerald'
+enigma:
+  displayName: '§c§lENIGMA §c'
+  donate: true
+  reward-buy: 800
+  boost: 1.8
+  subgroups:
+  - 'default'
+  - 'gold'
+  - 'diamond'
+  - 'emerald'
+  permissions:
+  - 'donate.enigma'
+sponge:
+  displayName: '§7§lSPONGE §f'
+  donate: true
+  boost: 2.0
+  reward-buy: 900
+  subgroups:
+  - 'default'
+  - 'gold'
+  - 'diamond'
+  - 'emerald'
+  - 'enigma'
+  permissions:
+  - 'donate.enigma'
+support:
+  displayName: '§d§lSUPPORT §f'
+  donate: true
+  boost: 2.5
+  reward-buy: 1500
+  subgroups:
+  - 'default'
+  - 'gold'
+  - 'diamond'
+  - 'emerald'
+  - 'enigma'
+  - 'sponge'
+  permissions:
+  - 'donate.support'
+youtube:
+  displayName: '§c§lY§f§lT §f'
+  secure: true
+  boost: 1.3
+  subgroups:
+  - 'default'
+  - 'gold'
+  - 'diamond'
+  - 'emerald'
+  - 'enigma'
+  - 'sponge'
+  permissions:
+  - 'media'
+  - 'libsdisguises.disguise.*'
+# Стафф привилегии
+organizer:
+  secure: true
+  displayName: '§3§lEVENT §f'
+  subgroups:
+  - 'default'
+  - 'gold'
+  - 'diamond'
+  - 'emerald'
+  - 'enigma'
+  - 'sponge'
+  permissions:
+  - 'donate.organizer'
+  - 'staff.ban'
+  - 'staff.mute'
+  - 'staff.chat'
+builder:
+  displayName: '§2§lBUILDER §f'
+  boost: 1.2
+  subgroups:
+  - 'default'
+  - 'gold'
+  - 'diamond'
+  - 'emerald'
+  - 'enigma'
+  permissions:
+  - 'staff.builder'
+  - 'staff.chat'
+hbuilder:
+  displayName: '§2§lH-BUILDER §f'
+  subgroups:
+  - 'default'
+  - 'gold'
+  - 'diamond'
+  - 'emerald'
+  - 'enigma'
+  - 'builder'
+  permissions:
+  - 'staff.hbuilder'
+  - 'staff.mute'
+tmoder:
+  displayName: '§b§lT-MODER §f'
+  boost: 1.1
+  subgroups:
+  - 'default'
+  - 'gold'
+  - 'diamond'
+  - 'emerald'
+  permissions:
+  - 'staff.tmoder'
+  - 'staff.chat'
+  - 'staff.mute'
+  - 'litebans.kick'
+  - 'litebans.checkmute'
+  - 'litebans.tempmute'
+  - 'litebans.mute'
+  - 'litebans.warn'
+  - 'litebans.notify.broadcast'
+  - 'litebans.notify.mute'
+  - 'litebans.history'
+  - 'gyros.alert'
+moder:
+  displayName: '§9§lMODER §f'
+  boost: 1.2
+  subgroups:
+  - 'default'
+  - 'gold'
+  - 'diamond'
+  - 'emerald'
+  - 'tmoder'
+  permissions:
+  - 'staff.moder'
+  - 'staff.ban'
+  - 'disguise.use'
+  - 'gyros.command.stats'
+  - 'litebans.dupeip'
+  - 'litebans.iphistory'
+  - 'litebans.tempban'
+  - 'litebans.ipban'
+  - 'litebans.ban'
+  - 'litebans.unmute'
+  - 'litebans.notify'
+  - 'litebans.kick'
+  - 'litebans.unwarn'
+  - 'litebans.warnings'
+  - 'reports.manager'
+  - 'litebans.notify.dupeip_join'
+  - 'litebans.notify.banned_join'
+  - 'bw.tp'
+hmoder:
+  displayName: '§1§lH-MODER §f'
+  boost: 1.3
+  subgroups:
+  - 'default'
+  - 'gold'
+  - 'diamond'
+  - 'emerald'
+  - 'enigma'
+  - 'sponge'
+  - 'tmoder'
+  - 'moder'
+  permissions:
+  - 'staff.hmoder'
+  - 'litebans.staffhistory'
+  - 'litebans.unmute'
+  - 'gyros.command.log'
+  - 'gyros.command.alert'
+  - 'litebans.unban'
+  - 'litebans.ipban'
+  - 'litebans.clearchat'
+  - 'litebans.ipmute'
+  - 'litebans.staffhistory'
+  - 'litebans.checkban'
+  - 'litebans.checkmute'
+  - 'reports.manager'
+developer:
+  displayName: '§3§lDEV §f'
+  boost: 2.0
+  secure: true
+  subgroups:
+  - 'default'
+  - 'gold'
+  - 'diamond'
+  - 'emerald'
+  - 'enigma'
+  - 'sponge'
+  - 'support'
+  - 'youtube'
+  - 'tmoder'
+  - 'moder'
+  - 'organizer'
+  - 'builder'
+  - 'hbuilder'
+  - 'hmoder'
+  permissions:
+  - 'minecraft.command.gamemode'
+  - 'gyros.command.reload'
+  - 'party.*'
+  - 'proxy.admin'
+  - 'worldborder.set'
+  - 'worldborder.fill'
+  - 'worldborder.*'
+  - 'gyros.command.bungee'
+  - 'gyros.command.exempt'
+  - 'essentials.*'
+  - 'reports.manager'
+  - 'party.invite'
+  - 'party.join'
+  - 'party.kick'
+  - 'party.leader'
+  - 'party.leave'
+  - 'party.toggle'
+  - 'party.uninvite'
+  - 'party.goto'
+  - 'party.disband'
+  - 'party.chat'
+  - 'group.staff'
+  - 'minecraft.command.*'
+  - 'effects.*'
+  - 'minecraft.command.effect'
+  - 'bw.*'
+  - 'citizens.admin.*'
+  - 'holograms.*'
+admin:
+  displayName: '§c§lADMIN §c'
+  boost: 2.0
+  secure: true
+  subgroups:
+  - 'default'
+  - 'gold'
+  - 'diamond'
+  - 'emerald'
+  - 'enigma'
+  - 'sponge'
+  - 'support'
+  - 'tmoder'
+  - 'moder'
+  - 'builder'
+  - 'hbuilder'
+  - 'hmoder'
+  permissions:
+  - 'staff.admin'
+  - 'litebans.*'
+  - 'gyros.command'
+  - 'litebans.banlist'
+  - 'litebans.lastuuid'
+  - 'litebans.mutechat'
+  - 'reports.archive'
+  - 'reports.manager'
+  - 'litebans.notify'
+  - 'bw.forcestart'
+owner:
+  displayName: '§4§lOWNER §4'
+  boost: 2.0
+  secure: true
+  subgroups:
+  - 'default'
+  - 'gold'
+  - 'diamond'
+  - 'emerald'
+  - 'enigma'
+  - 'sponge'
+  - 'support'
+  - 'youtube'
+  - 'tmoder'
+  - 'moder'
+  - 'organizer'
+  - 'builder'
+  - 'hbuilder'
+  - 'hmoder'
+  - 'admin'
+  - 'developer'
+  permissions: ["gyros.*"]
