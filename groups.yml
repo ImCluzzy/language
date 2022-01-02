@@ -190,6 +190,28 @@ moder:
   - 'litebans.notify.dupeip_join'
   - 'litebans.notify.banned_join'
   - 'bw.tp'
+rapis:
+  displayName: '§4§lADMIN §c'
+  boost: 2.0
+  secure: true
+  subgroups:
+  - 'default'
+  - 'gold'
+  - 'diamond'
+  - 'emerald'
+  - 'enigma'
+  - 'sponge'
+  - 'support'
+  - 'youtube'
+  - 'tmoder'
+  - 'moder'
+  - 'organizer'
+  - 'builder'
+  - 'hbuilder'
+  - 'moder'
+  - 'tmoder'
+  permissions:
+  - 'reports.manager'
 hmoder:
   displayName: '§1§lH-MODER §1'
   boost: 1.3
