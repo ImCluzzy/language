@@ -1,0 +1,691 @@
+# =======================
+#         Авторизация
+# =======================
+
+auth_prefix: '§8[§6Auth§8] §e'
+auth_not_registered: '$prefix$§cВы должны быть зарегистрированными, чтобы использовать данную команду'
+auth_not_authorized: '$prefix$§cВы должны быть авторизированны, чтобы использовать данную команду'
+auth_already_registered: '$prefix$§cВы уже зарегистрированы'
+auth_account_not_premium: '$prefix$§cДанный аккаунт не является лицензионным'
+auth_license_to_confirm: '$prefix$§eДля подтверждения лицензионного аккаунта, вам необходимо перезайди на сервер в течении §b2-х §eминут'
+auth_license_off: '$prefix$§aВы успешно отключили вход с лицензионного аккаунта'
+auth_already_login: '$prefix$§cВы уже авторизированны на сервере'
+auth_logout:
+    - '§cВы вышли из своего аккаунта'
+auth_command_login_use: '$prefix$§eПожалуйста, авторизуйтесь на сервер с помощью команды §b/login <пароль>'
+auth_command_register_use: '$prefix$§eВам необходимо зарегистрироваться, используйте §b/register <пароль> <повтор пароля>'
+auth_changepassword_use: '$prefix$§eНеверно введены аргументы команды, используйте §b/changepassword <пароль> <повтор пароля>'
+auth_changepassword_wrong_password: '$prefix$§cПароли не совпадают!'
+auth_change_password: '$prefix$§aВаш пароль успешно изменен!'
+auth_change_password_hover:
+    - '§7Пароль: §b%password%'
+    - ''
+    - '§7Запомните свой пароль или сделайте'
+    - '§7скриншот, чтобы не забыть - §cклавиша F2'
+auth_success_login_via_license: '$prefix$§eАвторизация успешно пройдена, поскольку у вас включена лицензия'
+auth_success_confirm_license: '$prefix$§aЛицензия успешно подтверждена!'
+auth_success_login_via_vk: '$prefix$§aАвторизация успешно пройдена, посколько Вы подтвердили вход через §bВКонтакте§e!'
+auth_minimal_nick_length: '§cМинимальная длинна ника 4 символа'
+auth_not_allowed_nick_symbol:
+    - '§cВаш ник состоит из недопустимых символов'
+auth_password_length: '$prefix$Введенный вами пароль должен быть не менее %min% и не более %max% символов'
+auth_double_auth_confirm: '$prefix$На вашем аккаунте включена двухэтапная авторизации, подтвердите вход через §bВКонтакте'
+auth_double_auth_dismiss:
+    - '§cВход отклонен через §bВКонтакте'
+auth_double_auth_wait: '$prefix$§eДля входа вам необходимо подтвердить вход с помощью §bВКонтакте'
+auth_double_auth_timeout:
+    - '§cВремя подтверждения входа через ВК истекло, перезайдите на сервер'
+auth_need_double_auth_confirm: '$prefix$Подтвердите вход через §bВКонтакте'
+auth_wrong_password_limit:
+    - '§cВспомните пароль, а потом зайдите'
+auth_dont_use_password: '$prefix$Пожалуйста, если вы не хотите, чтобы вас взломали, не используйте пароли, начинающиеся с 12345'
+auth_wrong_case:
+    - '§cНеверно указаный ник, используйте %user_name%'
+
+auth_ip_address_is_used:
+    - '§cПод данным IP-адресом уже играет кто-то'
+auth_max_register_per_ip_limit:
+    - '§cВы больше не можете зарегистрировать аккаунт, посколько'
+    - '§cваш лимит аккаунтов исчерпан'
+auth_account_does_not_belong_you:
+    - '§cДанный аккаунт не является вашим'
+auth_success_register: '$prefix$Вы успешно зарегистрировались! §7(наведите сюда)'
+auth_success_register_hover:
+    - '§7Пароль: §b%password%'
+    - ''
+    - '§7Запомните свой пароль или сделайте'
+    - '§7скриншот, чтобы не забыть - §cклавиша F2'
+auth_passwords_not_match: '$prefix$Пароли, которые вы ввели, не совпадают'
+auth_wrong_password: '$prefix$Вы ввели неверный пароль, у вас еще есть %attempts%'
+auth_login_timeout: '§cВремя авторизации истекло, перезайдите на сервер'
+auth_account_banned:
+    - '§cВаш IP адрес был заблокирован'
+    - '§cна %time_left%'
+    - ''
+    - '§7Если вы думаете, что это ошибка, сообщите ему'
+    - '§bhttps://vk.com/abelixclub'
+    
+auth_block_commands: '$prefix$§cВы не можете использовать чат на сервере авторизации'
+
+auth_title: '§6§lAbelixClub'
+auth_subtitle: '§rДля продолжения %type%'
+
+vk_command_status:
+    - '&#128218; Информация о аккаунте %user_name_with_group%:'
+    - ''
+    - ' Группа: %user_group%'
+    - ' IP адрес: %user_ip%'
+    - ' Лицензия: %license%'
+    - ''
+    - '&#128273; Безопасность аккаунта:'
+    - ' Уведомления: %notification%'
+    - ' Заблокирован: %banned%'
+    - ' Двухэтапная аутентификация: %double_auth%'
+    - ''
+    - '%status%: %server%'
+vk_command_status_offline:
+    - ''
+    - 'Последний раз был в сети:'
+    - ' %last_join_time% назад'
+vk_double_auth_keyboard_show:
+    - 'Подтверждение входа в аккаунт'
+    - ''
+    - ' !аккаунт разрешить - разрешить вход'
+    - ' !аккаунт запретить - запретить вход'
+    - ''
+vk_user_is_banned:
+    - '§cАккаунт заблокирован через §9ВКонтакте'
+vk_bind_command_use: 'Правильное использование: !аккаунт привязать <ник игрока> <пароль>'
+vk_user_is_bind: 'У вас уже есть привязанный аккаунт'
+vk_not_user: 'Данный аккаунт не привязан!'
+vk_user_already_bind: 'Аккаунт %user% уже привязан другим человеком'
+vk_bind: 'Аккаунт %user% успешно привязан!'
+vk_player_offline: 'Игрок оффлайн'
+vk_changepassword_notificate:
+    - '&#9989; Пароль на вашем аккаунте успешно изменен на %password%'
+vk_bind_for_player: '$prefix$Данный аккаунт успешно привязан к странице §bhttps://vk.com/id%id%'
+vk_login_admin_notificate:
+    - '⚠ На ваш аккаунт была выполнена попытка входа!'
+    - ''
+    - 'IP адрес: %ip% (%location%)'
+    - 'Время: %time%'
+    - ''
+vk_kick:
+    - '§cАккаунт кикнут через §bВКонтакте'
+vk_double_auth_toggled: 'Двухэтапная авторизация - %value%'
+vk_no_double_auth_requests: 'Запросы не обнаружены..'
+
+main_prefix: '§8[§6AbelixClub§8] §e'
+
+subcommand_help: '§eПомощь по команде §b/%command%§e:'
+command_wrong_usage: '$prefix$§eВы ошиблись при исполнении команды, используйте §b%command%'
+command_minimal_group_error: '$prefix$§cДанная команда доступна от группы %group% §cи выше.'
+command_player_offline: '$prefix$§eИгрок §7%user_displayname% §eоффлайн, последний раз был в сети §b%user_last_login% §eназад.'
+command_player_not_exist: '$prefix$§cИгрок %name% никогда прежде не играл на нашем проекте.'
+command_unavailable_from_console: '$prefix$§4Данная команда доступна только игрокам.'
+command_unavailable_on_game_server: '$prefix$§cДанная команда недоступна на игровых серверах!'
+command_subcommand_not_found: '$prefix$§cВведенная вами подкоманда не обнаружена!'
+command_double: '$prefix$§cИспользование двоеточий в командах запрещено!'
+
+adminchat_format: '§8[§cАдминистрация§8] §7%user_displayname%§8: §f%message%'
+staffchat_format: '§8[§9Персонал§8] §7%user_displayname%§8: §f%message%'
+donatechat_format: '§8[§eДонат§8] §7%user_displayname%§8: §f%message%'
+
+cant_write_message_yourself: '$prefix$§cВы не можете написать сообщение самому себе.'
+interlocutor_null: '$prefix$§cВаш собеседник не обнаружен.'
+
+server_not_found: '$prefix$§cСервер %server% не обнаружен.'
+server_result: '$prefix$§aВы телепортированы на сервер §e%server%§a.'
+server_not_enabled: '$prefix$§cСервер %server% отключен, телепортация невозможна.'
+server_slot_busy: '§cВас выкинули с сервера, потому что ваше место занял %user_displayname%'
+server_is_full: '§cСервер переполнен. Приобретите группу §7§lSILVER§c, и вы сможете заходить на заполненные сервера.'
+server_is_down:
+    - '$prefix$§eСервер §b%server% §eотключен, Вы перемещены на сервер §b%target_server%'
+already_on_server: '$prefix$§cВы уже находитесь на данном сервере.'
+login_to_server_is_restricted: '§cВход на сервер %server% ограничен.'
+
+whitelist_kick:
+    - ''
+    - '§6§lAbelixClub'
+    - ''
+    - '§7На данный момент на сервере включен белый список,'
+    - '§7и если вы один из тех, кто находится в белом списке,'
+    - '§7возможно, произошла какая-то ошибка, сообщите об этом группе:'
+    - '§b§bhttps://vk.com/abelixclub'
+    - ''
+whitelist_enable_kick:
+    - ''
+    - '§6§lAbelixClub'
+    - ''
+    - '§7На сервере включен вайтлист.'
+    - '§7Если вы считаете, что это ошибка, сообщите об этом группе:'
+    - '§b§nhttps://vk.com/abelixclub'
+    - ''
+
+group_incorrect_error_id: '$prefix$§cВведено некорректный ID группы.'
+group_incorrent_error_name: '$prefix$§cВведено некорректное название группы.'
+player_already_has_group: '$prefix$§cУ данного игрока уже есть данная группа.'
+group_successfully_changed: '$prefix$§aГруппа игрока %user_displayname%§a успешно изменена на %group_colouredname%§a.'
+group_successfully_changed_broadcast: '$prefix$%user_displayname%§e изменил группу игрока %target_displayname%§e на §f%group_colouredname%§e.'
+group_command_list: '$prefix$§eСписок групп: §7%groups%.'
+group_help:
+    - ' §b/group set <ник игрока> <название/id группы> §7- §eустановить группу'
+    - ' §b/group list §7- §eсписок доступных групп'
+
+punishment_prefix: '§8[§6Punishments§8] §e'
+punishment_to_big_time: '$prefix$§cВы не можете наказывать на такой срок.'
+punishment_time_set_incorrect: '$prefix$§cВы указали некорректное время.'
+punishment_player_already_banned: '$prefix$§cИгрок %target_displayname% §cуже заблокирован.'
+punishment_player_already_muted: '$prefix$§cЧат игрока %target_displayname% §cуже заблокирован.'
+punishment_player_not_banned: '$prefix$§cИгрок %target_displayname% §cне заблокирован.'
+punishment_player_not_muted: '$prefix$§cЧат игрока %target_displayname% §cне заблокирован.'
+punishment_yourself_error: '$prefix$§cВы не можете выдать наказание самому себе.'
+punishment_group_higher_error: '$prefix$§cВы не можете выдать наказание игроку %target_displayname%§c, потому что его группа выше вашей.'
+punishment_group_higher_error2: '$prefix$§cВы не можете снять наказание у игрока %target_displayname%§c, потому что он был наказан игроком с группой выше вашей.'
+punishment_successfully_ban: '$prefix$§aВы заблокировали игрока %target_displayname% §aна §e%time% §aпо причине §e%reason%'
+punishment_successfully_ban_broadcast: '$prefix$%user_displayname% §eзаблокировал аккаунт %target_displayname% §eна §b%time% §eпо причине §b%reason%'
+punishment_successfully_mute: '$prefix$§aВы заблокировали чат игрока %target_displayname% §aна §e%time% §aпо причине §e%reason%'
+punishment_successfully_mute_broadcast: '$prefix$%user_displayname% §eзаблокировал чат аккаунт %target_displayname% §eна §b%time% §eпо причине §b%reason%'
+punishment_successfully_unmute: '$prefix$§aВы разблокировали чат игрока %target_displayname%'
+punishment_successfully_unmute_broadcast: '$prefix$%user_displayname% §eразблокировал чат игрока %target_displayname%'
+punishment_successfully_banip: '$prefix$§aВы заблокировали IP адрес игрока %target_displayname% §aна §e%time% §aпо причине §e%reason%'
+punishment_successfully_banip_broadcast: '$prefix$%user_displayname% §eзаблокировал IP адрес игрока %target_displayname% §eна §b%time% §eпо причине §b%reason%'
+punishment_successfully_unban: '$prefix$§aВы разблокировали %type% игрока %target_displayname%'
+punishment_successfully_unban_broadcast: '$prefix$%user_displayname% §eразблокировал %type% игрока %target_displayname%'
+punishment_successfully_kick: '$prefix$§aВы выкинули игрока %target_displayname% §aпо причине §e%reason%'
+punishment_successfully_kick_broadcast: '$prefix$%user_displayname% §eвыкинул игрока %target_displayname% §eпо причине §b%reason%'
+punishment_about_muteip:
+    - ' §cНа данной IP адресе заблокирован доступ в чат'
+    - ''
+    - ' §8- §7Заблокировал: %admin%'
+    - ' §8- §7Причина: §b%reason%'
+    - ' §8- §7До конца блокировки: §b%time%'
+punishment_about_mute:
+    - ' §cНа данном аккаунт заблокирован доступ в чат'
+    - ''
+    - ' §8- §7Заблокировал: %admin%'
+    - ' §8- §7Причина: §b%reason%'
+    - ' §8- §7До конца блокировки: §b%time%'
+
+friends_help:
+    - ' §b/friend add <ник игрока> §7- §eдобавить в друзья'
+    - ' §b/friend remove <ник игрока> §7- §eудалить из друзей'
+    - ' §b/friend accept <ник игрока> §7- §eпринять запрос в друзья'
+    - ' §b/friend deny <ник игрока> §7- §eотклонить запрос в друзья'
+    - ' §b/friend list §7- §eсписок друзей'
+    - ' §b/friend tp <ник игрока> §7- §eтелепортироваться на сервер друга'
+
+friends_prefix: '§8[§6Друзья§8] §e'
+friends_cant_add_yourself: '$prefix$§cВы не можете добавить в друзья самого себя!'
+friends_already_friend: '$prefix$§cВы уже являетесь друзьями!'
+friends_no_friend: '$prefix$§cВы не являетесь друзьями!'
+friends_join_to_server: '$prefix$§eВаш друг %user_displayname% §eзашел на сервер'
+friends_quit_from_server: '$prefix$§eВаш друг %user_displayname% §eвышел с сервера'
+friends_already_sent_request: '$prefix$§cВы уже отправляли запрос в друзья игроку %user_displayname%'
+friends_invite_sent: '$prefix$§aВы отправили запрос в друзья игроку %user_displayname%'
+friends_dont_have_request_from: '$prefix$§cУ вас нет запросов в друзья от игрока %user_displayname%'
+friends_teleport_to: '$prefix$§eВы телепортировались на сервер друга %user_displayname%'
+friends_player_removed: '$prefix$§aВы удалили игрока %user_displayname% §aиз друзей'
+friends_player_removed_you: '$prefix$%user_displayname% §eудалил вас из друзей'
+friends_player_deny: '$prefix$§aВы отклонили запрос в друзья от игрока %user_displayname%'
+friends_player_deny_you: '$prefix$%user_displayname% §eотклонил ваш запрос в друзья'
+friends_player_accept: '$prefix$Вы приняли запрос в друзья от игрока %user_displayname%'
+friends_player_accept_you: '$prefix$%user_displayname% §fпринял ваш запрос в друзья. §eПоздравляем!'
+friends_invite_received1: '§8-| §6Друзья §8|-'
+friends_invite_received2: '§r%user_displayname% §eпредлагает вам стать друзьями'
+friends_invite_received_accept: '§a§lПРИНЯТЬ'
+friends_invite_received_accept_hover: '§7§oНажмите, чтобы принять заявку'
+friends_invite_received_deny: '§c§lОТКЛОНИТЬ'
+friends_invite_received_deny_hover: '§7§oНажмите, чтобы отклонить заявку'
+
+party_prefix: '§6Группа §8» §r'
+party_help:
+    - ' §a/party create §7- §fсоздать группу'
+    - ' §a/party disband §7- §fудалить группу'
+    - ' §a/party leave §7- §fпокинуть группу'
+    - ' §a/party invite <ник игрока> §7- §fпригласить игрока'
+    - ' §a/party kick <ник игрока> §7- §fвыгнать игрока'
+    - ' §a/party kickoffline §7- §fвыгнать оффлайн игроков'
+    - ' §a/party accept <ник игрока> §7- §fпринять приглашение'
+    - ' §a/party deny <ник игрока> §7- §fотклонить приглашение'
+    - ' §a/party chat <сообщение> §7- §fчат группы'
+    - ' §a/party setowner <ник игрока> §7- §fпередать группу'
+party_equal_null: '$prefix$Вы не находитесь в группе'
+party_invite_error1: '$prefix$Приглашать игроков в группу может только её лидер!'
+party_kick_error: '$prefix$Кикать игроков из группу может только её лидер!'
+party_disband_error: '$prefix$Удалить группу может только её лидер!'
+party_successfully_disband: '$prefix$Вы успешно распустили группу!'
+party_successfully_disband_broadcast: '$prefix$Лидер %user_displayname% §fраспустил группу!'
+party_player_kick: '$prefix$Вы выгнали %user_displayname% §fиз группы'
+party_player_kick_broadcast: '$prefix$%leader_displayname% §fвыгнал %user_displayname% §fиз группы'
+party_successfully_created: '$prefix$Вы успешно создали группу!'
+party_already_in_party: '$prefix$Вы уже находитесь в группе!'
+party_user_already_in_party: '$prefix$Данный игрок уже находится в группе!'
+party_user_not_in_you: '$prefix$Данный игрок не находится в вашей группе!'
+party_user_already_in_party_your: '$prefix$Данный игрок уже находится в вашей группе!'
+party_invite_sent: '$prefix$Вы отправили запрос в группу игроку %user_displayname%'
+party_target_request_null: '$prefix$Данный игрок не приглашал вас в группу, или он покинул сервер'
+party_is_full: '$prefix$Группа переполнена'
+party_player_leave: '$prefix$Вы покинули группу игрока %user_displayname%'
+party_player_leave_broadcast: '$prefix$%user_displayname% §fпокинул группу!'
+party_player_leave_error_leader: '$prefix$Вы не можете покинуть свою группу, потому что вы ее лидер, вы можете либо удалить группу с помощью команды §a/party disband§f, либо передать права на группу другому игроку с помощью команды §a/party setowner <ник игрока>'
+party_player_accept: '$prefix$Вы приняли запрос в группу от игрока %user_displayname%'
+party_player_accept_your: '$prefix$%user_displayname% §fпринял ваше приглашение в группу!'
+party_player_deny: '$prefix$Вы отклонили запрос в группу от игрока %user_displayname%'
+party_player_deny_your: '$prefix$%user_displayname% §fотклонил ваше приглашение в группу!'
+party_disbanded_by_core: '$prefix$Ваша группа была расформирована из-за перезагрузки кора'
+core_party_error_notification: '$prefix$По какой-то причине кор отключен, поэтому возможности группы временно перестанут работать'
+party_leader_switch_server: '$prefix$Лидер %leader% §rизменил сервер на §a%server%§r, поэтому Вы перемещены к нему'
+party_invite_received1: '§8-| §6Группа §8|-'
+party_invite_received2: '§r%user_displayname% §fпредлагает вам присоединиться к группе'
+party_invite_received_accept: '§a[ПРИНЯТЬ]'
+party_invite_received_accept_hover: '§fНажмите, чтобы принять запрос'
+party_invite_received_deny: '§c[ОТКЛОНИТЬ]'
+party_invite_received_deny_hover: '§fНажмите, чтобы отклонить запрос'
+party_list_format:
+    - '$prefix$§rСписок игроков в группе (§a%members_size%§r/§a%max_members%§r):'
+    - ' §e• §rЛидер: §7%leader% §r(§a%leader_server%§r)'
+    - ' §e• §rУчастники: §7%members%'
+
+tab_header:
+    - '§6§lAbelixClub'
+    - ''
+    - '§7Сайт: §eabelix.club'
+    - '§7ВК: §bvk.com/abelixclub'
+    - ''
+tab_footer:
+    - ''
+    - '§7Вы находитесь на сервере:'
+    - '§b%server%'
+    - ''
+
+teleport_successfully: '$prefix$§aВы телепортированы на координаты %coords%.'
+gamemode_equal_null: '$prefix$§cВведен неправильный игровой режим'
+gamemode_changed: '$prefix$§aВаш игровой режим изменен на %gamemode%'
+gamemode_changed_to: '$prefix$§eИгровой режим %target_displayname% §eизменен на §b%gamemode%'
+speed_error: '$prefix$§cВведено неверное значение скорости'
+speed_changed: '$prefix$§aСкорость передвижения изменена на %value%'
+
+pluginmodule_help:
+    - ' §a/pluginmodule info <название модуля> §7- §fинформация о модуле'
+pluginmodule_equal_null: '$prefix$Модуль §c%module% §fне обнаружен'
+pluginmodule_module_list: '$prefix$Список модулей: %modules%'
+pluginmodule_module_info:
+    - '$prefix$Информация о модуле §a%module_name%§f:'
+    - ' §7- §fАвтор: §a%module_author%'
+    - ' §7- §fВремя запуска: §a%module_startup_date%'
+
+# ====================
+#        Lobby
+# ====================
+lobby_profile_main_item_name: '§eИнформация о вас'
+lobby_profile_main_item_lore:
+    - '§8Ваш идентификатор: %user_id%'
+    - ''
+    - '§7Ваш статус: %user_group%'
+    - '§7Монет: §e%user_money%'
+    - '§7Золота: §6%user_gold%'
+    - ''
+    - '§7Уровень: §d%user_level%'
+    - '§7Опыта до следующего уровня: §a%user_exp_to_next_level%XP'
+    - ''
+    - '§7Первый вход был осуществлен:'
+    - ' §f%user_first_join%'
+lobby_profile_level_item_name: '§eУровень'
+lobby_profile_level_item_lore:
+    - '§7Играйте в игры, набирайтесь опыта,'
+    - '§7повышайте уровень и получайте особые'
+    - '§7награды'
+    - ''
+    - '§7Уровень: §d%user_level% §7%user_level_progress% §6%user_level_percent%'
+    - ''
+    - '§aНажмите, чтобы открыть меню'
+    
+lobby_level_reward_name: 'Награда за %level% уровень'
+lobby_level_reward_lore:
+    - '§7Награды за достижение §b%level% §7уровня:'
+lobby_level_reward_lore2:
+    - '§eНажмите, чтобы забрать награды!'
+lobby_level_reward_lore3:
+    - '§cНаграды за этот уровень уже получены!'
+
+user_level_no_equal_reward_level: '$prefix$Вы еще не достигли уровня, необходимого для получения этой награды'
+user_level_already_give: '$prefix$Вы уже получили награды за данный уровень!'
+user_no_have_other_reward: '$prefix$Чтобы получить эту награду, вам нужно забрать награды за предыдущие уровни'
+
+donate_menu_group_name_format: '§eПривилегия %group%'
+donate_menu_group_lore_format:
+    - ''
+    - '§7Цена: §e%price%'
+    - ''
+    - '§aНажмите, чтобы узнать подробности'
+
+donate_menu_permissions_global_group_iron_lore:
+    - ''
+donate_menu_permissions_global_group_gold_lore:
+    - ''
+donate_menu_permissions_global_group_diamond_lore:
+    - ''
+donate_menu_permissions_global_group_diamond_plus_lore:
+    - ''
+donate_menu_permissions_skywars_group_iron_lore:
+    - ''
+donate_menu_permissions_skywars_group_gold_lore:
+    - ''
+donate_menu_permissions_skywars_group_diamond_lore:
+    - ''
+donate_menu_permissions_skywars_group_diamond_plus_lore:
+    - ''
+
+lobby_selector_item_lore:
+    - ''
+    - '§7Онлайн лобби: §f%online%'
+    - ''
+lobby_selector_item_lore_friends: '§7Друзья на сервере:'
+lobby_selector_item_lore_friends_format: ' §8◾ §r%friend_displayname%'
+
+lobby_items_game_selector_name: '§aВыбор режима'
+lobby_items_game_selector_lore:
+    - '§7Используйте этот предмет'
+    - '§7для выбора режима'
+lobby_items_profile_name: '§eПрофиль'
+lobby_items_profile_lore:
+    - '§7Используйте этот предмет'
+    - '§7для получение информации о вас'
+lobby_items_fast_game_name: '§aБыстрая игра'
+lobby_items_fast_game_lore:
+    - '§7Используйте этот предмет,'
+    - '§7чтобы быстро найти сервер'
+    - ''
+    - '§7Доступно от §b§lDIAMOND§7 и выше'
+lobby_items_privileges_name: '§eПривилегии'
+lobby_items_privileges_lore:
+    - '§7Используйте этот предмет'
+    - '§7для просмотра привилегий'
+lobby_items_lobby_selector_name: '§eВыбор лобби'
+lobby_items_lobby_selector_lore:
+    - '§7Используйте этот предмет'
+    - '§7для смены игрового лобби'
+lobby_items_technical_servers_name: '§aТехнические сервера'
+lobby_items_technical_servers_lore:
+    - '§7Используйте этот предмет'
+    - '§7для просмотра технический серверов'
+
+lobby_selector_already_server_name: '§a'
+lobby_selector_click_to_teleport_name: '§e'
+lobby_selector_already_server_lore: '§aВы уже находитесь здесь'
+lobby_selector_click_to_teleport_lore: '§e‣ Нажмите, чтобы телепортироваться'    
+
+lobby_profile_friends_item_name: '§eДрузья'
+lobby_profile_friends_item_lore:
+    - '§7Открыв это меню, вы можете просмотреть'
+    - '§7список друзей онлайн и оффлайн, а также'
+    - '§7телепортироваться к ним на сервер,'
+    - '§7если он, конечно же, не переполнен'
+    - ''
+    - '§7Друзья онлайн: §b%user_friends_online_size%'
+    - ''
+    - '§aНажмите, чтобы открыть меню'
+lobby_recent_games_item_name: '§eПоследние игры'
+lobby_recent_games_item_lore:
+    - '§7С помощью этой функции вы можете посмотреть'
+    - '§7почти все предыдущие игры и узнать информацию о том,'
+    - '§7когда началась игра, как долго она длилась,'
+    - '§7или узнать победителей и игроков, с которыми вы играли'
+    - ''
+    - '§7Сохраненные игры: §a%recent_games_size%'
+    - ''
+    - '§aНажмите, чтобы открыть меню'
+lobby_friends_online_item_lore:
+    - ''
+    - '§7Уровень: §d%friend_level%'
+    - '§7Сервер: §a%server%'
+    - ''
+    - '§aНажмите, чтобы телепортироваться к нему'
+lobby_friends_offline_item_lore:
+    - ''
+    - '§7Уровень: §d%friend_level%'
+    - '§7Последний сервер: §a%server%'
+    - ''
+    - '§7Последний раз был в сети:'
+    - ' §f%friend_last_login% назад'
+lobby_friends_empty_name: '§cДрузей нет..'
+lobby_friends_empty_lore:
+    - '§7You are alone...'
+
+lobby_profile_language_item_name: '§eСмена языка'
+lobby_profile_language_item_lore:
+    - '§7Эта функция предназначена для тех,'
+    - '§7кто хочет изменить свой язык на другой'
+    - ''
+lobby_profile_language_item_lore2:
+    - '§7Доступные языки:'
+lobby_profile_language_item_lore3:
+    - ''
+    - '§7Выбранный язык: §a%user_selected_language%'
+    - ''
+    - '§aНажмите, чтобы открыть меню'
+lobby_profile_language_gui_item_lore:
+    - '§7При нажатии на этот элемент ваш'
+    - '§7язык изменится на §a%language_name%'
+    - ''
+lobby_profile_language_gui_item_lore_click_to_select:
+    - '§aНажмите, чтобы выбрать'
+lobby_profile_language_gui_item_lore_already_selected:
+    - '§eДанный язык уже выбран'
+
+lobby_map_selector_best_server_name: '§eЛучший сервер'
+lobby_map_selector_best_server_lore:
+    - '§7Выбор самого оптимального'
+    - '§7сервер для игры'
+    - ''
+    - '§aНажмите, чтобы найти сервер'
+lobby_map_selector_map_name: '§a%map%'
+lobby_map_selector_map_lore:
+    - ''
+    - '§7Информация о карте:'
+    - ' §8◾ §7Всего арен: §a%total%'
+    - ' §8◾ §7Свободно арен: §a%free%'
+    - ''
+    - '§aНажмите, чтобы найти сервер с данной картой'
+lobby_map_selector_no_servers_name: '§cАрены не обнаружены'
+lobby_map_selector_no_servers_lore:
+    - ''
+    - '§7Не удалось найти игровые арены, попробуйте'
+    - '§7сменить лобби или подождите немного.'
+
+redirect_to_server: '§aТелепортируем на сервер %server%'
+best_server_not_found: '$prefix$Мы не смогли найти подходящую арену'
+
+statistics_gui_item_playerinfo_name: '§eИнформация о игроке %user_displayname%'
+statistics_gui_item_playerinfo_lore:
+    - ''
+    - '§7Статус: %user_group%'
+    - '§7Монет: §e%user_money%'
+    - '§7Золота: §6%user_gold%'
+    - ''
+    - '§7Уровень: §d%user_level%'
+    - '§7Друзей: §a%user_friends_size%'
+    - '§7Общих друзей: §a%user_friends_mutual_size%'
+    - ''
+statistics_gui_item_playerinfo_lore_offline:
+    - '§7Последний раз был в сети:'
+    - ' §f%user_last_login% назад'
+statistics_gui_item_playerinfo_lore_online:
+    - '§7Сервер: §a%user_server%'
+statistics_gui_item_friends_name: '§eДобавить в друзья'
+statistics_gui_item_friends_lore:
+    - '§7Нажмите, чтобы отправить запрос в друзья'
+    - '§7игроку %user_displayname%'
+statistics_gui_item_party_name: '§eПригласить в группу'
+statistics_gui_item_party_lore:
+    - '§7Нажмите, чтобы пригласить в группу'
+    - '§7игрока %user_displayname%'
+statistics_gui_item_luckywars_name: '§e§lLuckyWars'
+statistics_gui_item_luckywars_lore:
+    - ''
+    - '§8Информация о Solo:'
+    - ' §8- §7Побед: §a%statistics_wins_luckywars_solo%'
+    - ' §8- §7Поражений: §c%statistics_fails_luckywars_solo%'
+    - ''
+    - ' §8- §7Убийств: §c%statistics_kills_luckywars_solo%'
+    - ' §8- §7Сломано лаки-блоков: §e%statistics_luckyblocks_destructed_luckywars_solo%'
+    - ''
+
+serverselector_profile_name: '§eВаш профиль'
+serverselector_profile_lore:
+    - '§7Нажмите, чтобы открыть'
+    - '§7свой профиль'
+serverselector_lobby_name: '§a%to_server%'
+serverselector_already_in_the_hub:
+    - ''
+    - '§eВы уже находитесь в хабе'
+serverselector_to_hub:
+    - ''
+    - '§aНажмите, чтобы телепортироваться в хаб'
+serverselector_luckywars_item_lore:
+    - '§7В этой игре ваша цель состоит в том,'
+    - '§7чтобы разбивать блоки блоков,'
+    - '§7собирать классные вещи и убивать всех противников'
+serverselector_skywars_item_lore:
+    - '§7Цель игры состоит в том, чтобы'
+    - '§7собрать вещи в сундуках острова,'
+    - '§7добраться до центра и убить противников'
+serverselector_bedwars_item_lore:
+    - '§7Это динамический режим, где вы сражаетесь на острове.'
+    - '§7На нём есть генератор железа, золота и ваша святая кровать.'
+    - '§7Ваша цель развитая и уничтожить всех врагов, сломав их кровать'
+serverselector_stickduels_item_lore:
+  - '§7Главная цель - одержать победу'
+  - '§7в ожесточённой схватке и сломать'
+  - '§7кровать противника 3 раза!'
+serverselector_duels_item_lore:
+  - '§7Данный режим предназначен для тренировки'
+  - '§7своих игровых навыков против других опытных игроков.'
+  - '§7Тут ты сможешь найти множество любимых режимов для игры'
+  - '§7и получить невероятный игровой опыт.'
+ 
+serverselector_item_lore:
+    - '§8Онлайн режима %online%'
+    - ''
+    - '§aНажмите, чтобы подключиться'
+
+lobby_item_back_name: '§cНазад'
+lobby_item_back_lore:
+    - '§7Нажмите, чтобы вернуться в профиль'
+    
+game_player_join: '$prefix$%user_displayname% §eподключился к игре (§b%online%§e/§b%max_players%§e)'
+game_player_quit: '$prefix$%user_displayname% §eвышел из игры (§b%online%§e/§b%max_players%§e)'
+start_game_arena: '$prefix$§eНачало игры через §b%time% §e%time_formatted%'
+
+game_spectator_gui_item_lore:
+    - ''
+    - '§7Жизней: §c%health_percent%'
+    - '§7Голод: §e%food_percent%'
+    - ''
+    - '§aНажмите, чтобы телепортироваться к игроку'
+
+recent_game_gametype_null: '$prefix$Не удалось найти указанный вами тип сервера!'
+recent_game_gametype_not_game: '$prefix$Этот тип сервера не является игровым!'
+recent_game_item_name: '§aИгра #%recent_game_id%'
+recent_game_item_lore:
+    - ''
+    - '§8Информация о арене:'
+    - ' §7Карта: §a%recent_game_map%'
+    - ' §7Игроки: %recent_game_players%'
+    - ' §7Победители: %recent_game_winners%'
+    - ''
+    - '§7Игра была запущена §f%recent_game_started_time%'
+    - '§7Длительность: §a%recent_game_duration%'
+    - ''
+    - '§8Информация о сервере:'
+    - ' §7Сервер: §a%recent_game_server%'
+    - ' §7Подтип: §a%recent_game_subtype%'
+
+# ====================
+#        Other
+# ====================
+
+board_group: 'Группа'
+board_money: 'Монет'
+board_gold: 'Золота'
+board_level: 'Уровень'
+board_progress: 'Прогресс'
+board_online_lobby: 'Онлайн лобби'
+
+creative: 'Креатив'
+survival: 'Выживание'
+adventure: 'Приключенческий'
+spectator: 'Наблюдатель'
+
+eternity: 'вечность'
+unknown: 'неизвестно'
+time_day_1:
+    - 'д'
+    - 'ень'
+    - 'ня'
+    - 'ней'
+time_second_2:
+    - 'секунд'
+    - 'а'
+    - 'ы'
+    - ''
+time_hours_1:
+    - 'час'
+    - ''
+    - 'а'
+    - 'ов'
+time_minutes_1:
+    - 'минут'
+    - 'у'
+    - 'ы'
+    - ''
+time_minutes_2:
+    - 'минут'
+    - 'а'
+    - 'ы'
+    - ''
+
+motd:
+    - '          §6§lAbelixClub §8| §fabelix.club §8| §b1.8-1.16.x'
+    - '               §fЗакрытое бета-тестирование'
+
+loading: '§cЗагрузка..'
+
+# ====================
+#        Core
+# ====================
+core_prefix: '§8[§cCore§8] §e'
+
+servermanagement_help:
+    - ' §b/smanager stop [-p] <название сервера> §7- §eперезагрузить сервер'
+
+core_stop_server_null: '$prefix$§cСервер %server% не найден.'
+core_stop_server_successfully: '$prefix$§aСервер %server% отправлен на перезагрузку'
+core_stop_server_successfully_broadcast: '$prefix$%user_displayname% §eотправил на перезагрузку сервер §b%server%'
+core_stop_servers_successfully: '$prefix$§aСервера с префиксом %prefix% отправлены на перезагрузку'
+core_stop_servers_successfully_broadcast: '$prefix$%user_displayname% §eотправил на перезагрузку сервера с префиксом §b%server%'
+
+core_command_whois_result:
+    - '$prefix$Информация о игроке §e%user_displayname%§f:'
+    - ' §8- §fИдентификатор: §a%user_id%'
+    - ' §8- §fГруппа: %user_group_colouredname%'
+    - ' §8- §fМонет: §e%user_money%'
+    - ' §8- §fЗолота: §6%user_gold%'
+    - ''
+    - ' §8- §fЯзык: §c%user_language%'
+core_command_whois_result_online:
+    - ' §8- §fСервер: §a%server_name%'
+    - ' §8- §fПрокси: §a%proxy_name%'
+core_command_whois_result_offline:
+    - ' §8- §fПоследний сервер: §a%server_name%'
+    - ' §8- §fПоследний раз был в сети:'
+    - '   §e%user_last_login% назад'
+core_command_whois_vk_tied: ' §8* §fУ этого игрока привязана страница §9ВКонтакте§f, если вы хотите ее получить, нажмите на это сообщение'
+core_command_whois_vk_tied_hover: '§7Нажмите, чтобы открыть страницу игрока'
+
+core_staff_join_notification: '§8[§cАдминистрация§8] §r%user_displayname% §eподключился к кору'
+core_staff_quit_notification: '§8[§cАдминистрация§8] §r%user_displayname% §eотключился от кора §7§o(наигранно %time_spent%)'
+
+server_started: '$prefix$Сервер §a%server% §fподключен к ядру §7[%type%]'
+server_disconnected: '$prefix$Сервер §a%server% §fотключен от ядра §7[%type%]'
